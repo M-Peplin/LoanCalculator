@@ -1,0 +1,26 @@
+CREATE SCHEMA [Loan]
+
+GO
+
+/****** Object:  Table [PC].[Components]    Script Date: 13.11.2022 17:13:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [Loan].[Loan](
+	[IdLoan] [int] IDENTITY(1,1) NOT NULL,
+	[LoanName] varchar(50) NOT NULL,
+	[Interest] float NOT NULL, 
+	
+PRIMARY KEY CLUSTERED 
+(
+	[IdLoan] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+INSERT INTO [Loan].[Loan] (LoanName, Interest)
+VALUES ('Housing Loan', 3.5)
